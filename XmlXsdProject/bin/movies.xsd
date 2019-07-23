@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.zensar.com/movies" xmlns:zen="http://www.zensar.com/movies" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.zensar.com/movies" xmlns:zen="http://www.zensar.com/movies" elementFormDefault="qualified">
 <element name ="movies">
 <complexType>
   <sequence>
@@ -20,12 +20,12 @@
           <element name="theater-name">
               <simpleType>
                  <restriction base="string">
-                         <minInclusive value="4"></minInclusive>
-                        <maxExclusive value="20"></maxExclusive>
+                         <minLength value="4"></minLength>
+                         <maxLength value="20"></maxLength>
                  </restriction>
              </simpleType>        
            </element>
-           <element name="city" minOccurs="0" maxOccurs="unbounded"></element>
+           <element name="city" minOccurs="0" maxOccurs="1"></element>
         </sequence>
       </complexType>
 
@@ -35,5 +35,4 @@
 
 </element>
 
-
-</xs:schema>
+</schema>
